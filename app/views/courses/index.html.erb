@@ -5,29 +5,19 @@
 </div>
 
 <div class="row">
+ <% @courses.each do |course| %>
     <div class="col s6 m6">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <span class="card-title">CS111: Intro to Computer Science</span>
-          <p>A through intro to Computer Science. A through intro to Computer Science. A through intro to Computer Science</p>
+          <span class="card-title"><%= course.short_name %>: <%= course.name %></span>
+          <%= course.description %>
         </div>
         <div class="card-action">
           <a href="#">Enroll</a>
           <a href="#">Info</a>
         </div>
       </div>
-	    </div>
-	     <div class="col s6 m6">
-	      <div class="card blue-grey darken-1">
-	        <div class="card-content white-text">
-	          <span class="card-title">CS111: Intro to Computer Science</span>
-	          <p>A through intro to Computer Science. A through intro to Computer Science. A through intro to Computer Science</p>
-	        </div>
-	        <div class="card-action">
-	          <a href="#">Enroll</a>
-	          <a href="#">Info</a>
-	        </div>
-	      </div>
-	    </div>
-  </div>
+	</div>
+ <%end%>
+</div>
             
